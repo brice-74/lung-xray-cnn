@@ -1,0 +1,8 @@
+FROM tensorflow/tensorflow:latest-gpu-jupyter
+WORKDIR /tf/notebooks
+
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
+COPY req.txt .
+RUN pip install -r req.txt

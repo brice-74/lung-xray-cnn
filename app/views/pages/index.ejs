@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Zoidberg prediction</title>
+  </head>
+  <body>
+    <main>
+      <% if (typeof message != 'undefined') { %>
+        <p><%= message %></p>
+      <% } %>
+      
+      <form method="POST" action="/" enctype="multipart/form-data">
+        <label for="img-input">image</label>
+        <input type="file" name="img-input"/>
+        <button type="submit">predict</button>
+      </form>
+
+      <% if (typeof content != 'undefined') { %>
+        <p>Lung condition: <%= content %></p>
+      <% } %>
+    </main>
+  </body>
+</html>
